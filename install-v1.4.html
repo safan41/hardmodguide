@@ -146,7 +146,7 @@
                     <ul>
                         <li>The latest release of <a href="files/ugopwn.zip">ugopwn</a> </li>
                         <li>The latest release of <a href="https://github.com/Jimmy-Z/twlnf/releases">twlnf</a></li>
-
+			<li>The latest release of <a href="files/boot.nds">hbmenu_retro</a> </li>
                         <li>The latest release of <a href="files/dsi_srl_extract.zip">DSi SRL Extractor (with console_id.py)</a> </li>
                         <li>A twlnf firmware v1.4 installation script for your region (<a href="files/install-1.4-USA.nfs">USA</a> or <a href="files/install-1.4-EUR.nfs">EUR</a>)</li>
                         <li>The latest release of <a href="https://www.python.org/downloads/">Python 3</a></li>
@@ -166,8 +166,8 @@
                         <li>Power on your device.</li>
                         <li>Go to System Settings &gt; Data Management &gt; System Memory &gt; Flipnote Studio (or any other DSiWare) &gt; Copy &gt; Yes, and then exit to the DSi Menu. <em>(If Data Management isn't appearing, open the DSi Shop, close it, and try again.)</em></li>
                         <li>Power off your device, and insert the device's SD card into your computer. </li>
-
-                        <li>Copy <i>the contents of</i> <code class="highlighter-rouge">twlnf.zip</code> to the root of your SD card, and rename <code class="highlighter-rouge">twlnf.nds</code> to <code class="highlighter-rouge">boot.nds</code>.</li>
+			<li>Copy <code class="highlighter-rouge">boot.nds</code> to the root of your SD card.</li>
+                        <li>Copy <i>the contents of</i> <code class="highlighter-rouge">twlnf.zip</code> to the root of your SD card.</li>
                         <li>Copy <em>the contents of</em> the "pack" folder from <code class="highlighter-rouge">ugopwn.zip</code> to the root of your SD card. </li>
                         <li>Copy the twlnf 1.4 installation script for your region to the root of your SD card.</li>
                         <li>Unzip <code class="highlighter-rouge&quot;">dsi_srl_extract.zip</code> to your computer. Open your SD Card's drive, and navigate to Private &gt; DS &gt; Title. Copy your .bin file to your <code class="highlighter-rouge&quot;">dsi_srl_extract</code> directory. If multiple .bin files are present, only one needs to be copied.</li>
@@ -190,7 +190,7 @@
                         <li>Click on the single right arrow (the next to last arrow icon) two times. You will see a new frame be created. </li>
                         <li>Click on the paste button exactly 122 times. </li>
                         <li>Click the erase button, then the paste button.</li>
-
+			<li>Navigate to twlnf.nds, and press (A) to confirm.</li>
                         <li>You are now in twlnf. When prompted, press (A) to create a NAND backup. This will take a few minutes.</li>
                         <li>When the NAND backup is finished, press (B) to exit twlnf. This will power off your device.</li>
                     </ol>
@@ -217,7 +217,7 @@
                     <h4 id="section-iii-installing">Section III - Installing System Version 1.4</h4>
                     <ol>
                         <li>We are now modifying the DSi NAND directly. Ensure your DSi is plugged in and has a full battery.</li>
-                        <li>Repeat steps 11 - 24 of Section I to run twlnf.</li>
+                        <li>Repeat steps 12 - 26 of Section I to run twlnf.</li>
                         <li>Wait for twlnf to load. When prompted, press (X) to mount the NAND directly. <em>(twlnf does not list this as an option.)</em></li>
                         <li>Navigate to <code class="highlighter-rouge">install-1.4-(your region).nfs</code>. Press (A) to execute.</li>
                         <li>twlnf will now verify that all files are in place. When prompted, press (A) to continue.</li>

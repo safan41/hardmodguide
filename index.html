@@ -1,166 +1,112 @@
 <!doctype html>
 <html lang="en" class="no-js">
-  <head>
+
+<head>
     <meta charset="utf-8">
 
-<!-- begin SEO -->
+    <!-- begin SEO -->
 
+    <title>TWLguide</title>
 
+    <meta name="description" content="A reasonably complete guide to DSi hacking, from stock to homebrew.">
 
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="TWLguide">
+    <meta property="og:title" content="TWLguide">
 
+    <link rel="canonical" href="https://jerbear64.github.io/twlguide/index.html">
+    <meta property="og:url" content="https://jerbear64.github.io/twlguide/index.html">
 
-<title>TWLguide</title>
+    <meta property="og:description" content="A reasonably complete guide to DSi hacking, from stock to homebrew.">
 
+    <script type="application/ld+json">
+        {
+          "@context" : "http://schema.org",
+          "@type" : "Person",
+          "name" : "jerbear64",
+          "url" : "https://jerbear64.github.io/twlguide",
+          "sameAs" : null
+        }
+    </script>
+    <!-- end SEO -->
 
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+    </script>
 
-<meta name="description" content="A reasonably complete guide to DSi hacking, from stock to homebrew.">
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="https://3ds.guide/assets/css/main.css">
 
-
-
-
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="TWLguide">
-<meta property="og:title" content="TWLguide">
-
-
-  <link rel="canonical" href="https://jerbear64.github.io/twlguide/index.html">
-  <meta property="og:url" content="https://jerbear64.github.io/twlguide/index.html">
-
-
-
-  <meta property="og:description" content="A reasonably complete guide to DSi hacking, from stock to homebrew.">
-
-
-
-
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "jerbear64",
-      "url" : "https://jerbear64.github.io/twlguide",
-      "sameAs" : null
-    }
-  </script>
-<!-- end SEO -->
-
-
-
-
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="https://3ds.guide/assets/css/main.css">
-
-<meta http-equiv="cleartype" content="on">
+    <meta http-equiv="cleartype" content="on">
 
     <!-- start custom head snippets -->
 
-<!-- insert favicons. use http://realfavicongenerator.net/ -->
+    <!-- insert favicons. use http://realfavicongenerator.net/ -->
 
-<script type="text/javascript">
-    var host = "dsiguide.me";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-        window.location.protocol = "https";
-</script>
+    <script type="text/javascript">
+        var host = "dsiguide.me";
+        if ((host == window.location.host) && (window.location.protocol != "https:"))
+            window.location.protocol = "https";
+    </script>
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
 
-<!-- end custom head snippets -->
+    <!-- end custom head snippets -->
 
-  </head>
+</head>
 
-  <body class="layout--splash">
+<body class="layout--splash">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
     <div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <ul class="visible-links">
-          
-          
-          
-          
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="index.html">twlguide</a></li>
-          <li class="masthead__menu-item"><a href="credits.html">Credits</a></li>
+        <div class="masthead__inner-wrap">
+            <div class="masthead__menu">
+                <nav id="site-nav" class="greedy-nav">
+                    <ul class="visible-links">
 
-        </ul>
-        <ul class="hidden-links links-menu hidden"></ul>
-        <!--see deleted language from source for the language stuff... you shouldn't be seeing this. stop messing w/ the source!/-->
-        <button class="nav-selector" id="toggle-nav"><div class="navicon"></div></button>
-      </nav>
+                        <li class="masthead__menu-item masthead__menu-item--lg"><a href="index.html">twlguide</a></li>
+                        <li class="masthead__menu-item"><a href="credits.html">Credits</a></li>
+                        <li class="masthead__menu-item"><a href="dumping-dsiwares.html">Dumping DSiWare</a></li>
+
+                    </ul>
+                    <ul class="hidden-links links-menu hidden"></ul>
+                    <!--see deleted language from source for the language stuff... you shouldn't be seeing this. stop messing w/ the source!/-->
+                    <button class="nav-selector" id="toggle-nav"><div class="navicon"></div></button>
+                </nav>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
+    <div class="page__hero--overlay" style="background-color: #5e616c; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://dsiguide.me/images/home-page-feature.jpg');">
 
-    
+        <div class="wrapper">
+            <h1 class="page__title" itemprop="headline">
 
+                TWLguide
 
-  
+            </h1>
 
+            <p class="page__lead">A reasonably complete guide to DSi hacking, <br /> from stock to homebrew.<br />
+            </p>
 
+            <p><a href="get-started.html" class="btn btn--light-outline btn--large">Get Started</a></p>
 
+        </div>
 
-
-
-
-<div class="page__hero--overlay"
-  style="background-color: #5e616c; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://dsiguide.me/images/home-page-feature.jpg');"
->
-  
-    <div class="wrapper">
-      <h1 class="page__title" itemprop="headline">
-        
-          TWLguide
-
-        
-      </h1>
-      
-        <p class="page__lead">A reasonably complete guide to DSi hacking, <br /> from stock to homebrew.<br />
-</p>
-      
-      
-      
-        <p><a href="get-started.html" class="btn btn--light-outline btn--large">Get Started</a></p>
-      
     </div>
-  
-  
-</div>
 
-
-
-<!--script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!--script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-6670011780914577",
@@ -168,37 +114,30 @@
   });
 </--script-->
 
-<div id="main" role="main">
+    <div id="main" role="main">
 
-  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
+        <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
 
-    <meta itemprop="headline" content="jerbear64.github.io/twlguide">
-    <meta itemprop="description" content="A reasonably guide to DSi hacking,  from stock to homebrew.">
-    
-    
+            <meta itemprop="headline" content="jerbear64.github.io/twlguide">
+            <meta itemprop="description" content="A reasonably guide to DSi hacking,  from stock to homebrew.">
 
-    <section class="page__content" itemprop="text">
-      <hr>
-        
-      
-      
+            <section class="page__content" itemprop="text">
+                <hr>
 
-      <p class="notice--warning">Please note: This guide is incomplete, due to some exploits (such as RocketLauncher) being unreleased. For now, we will walk you through installing firmware version 1.4 on your DSi, which is the firmware version required for RocketLauncher to function once it's released.</p>
-        
-        <div class ="notice"><b>If you need help, ask the <a href="https://discord.gg/8X5ddgH">NDS(i)Brew Scene Discord server</a>!</b></div>
-      
-        
-        <div class ="notice"><b>If you would like to donate, you can do so through <a href="https://www.paypal.me/jerbear64">PayPal</a>.</b></div>
-      
-   
-        <p class="notice--info">This guide currently works with the DSi and DSi XL with the United States region.</p>
+                <p class="notice--warning">Please note: This guide is incomplete, due to some exploits (such as RocketLauncher) being unreleased. For now, we will walk you through installing firmware version 1.4 on your DSi, which is the firmware version required for RocketLauncher to function once it's released.</p>
 
-	  <!--hr>
+                <div class="notice"><b>If you need help, ask the <a href="https://discord.gg/8X5ddgH">NDS(i)Brew Scene Discord server</a>!</b></div>
+
+                <div class="notice"><b>If you would like to donate, you can do so through <a href="https://www.paypal.me/jerbear64">PayPal</a>.</b></div>
+
+                <p class="notice--info">This guide currently works with the DSi and DSi XL with the United States region.</p>
+
+                <!--hr>
 
       <center>
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- Guide -->
-      <!--ins class="adsbygoogle"
+                <!--ins class="adsbygoogle"
           style="display:block"
           data-ad-client="ca-pub-6670011780914577"
           data-ad-slot="2889110246"
@@ -209,56 +148,54 @@
       </center>
 
       <hr-->
-      
-      
-<div class="notice--danger">
-<p>This guide is for retail (consumer purchased) DSi and DSi XL consoles <em>only</em>!</p>
-</div>
-	    
-<p class="notice--warning">Read all of the introductory pages before proceeding.</p>
 
-<h2 id="what-is-homebrew">What is homebrew?</h2>
+                <div class="notice--danger">
+                    <p>This guide is for retail (consumer purchased) DSi and DSi XL consoles <em>only</em>!</p>
+                </div>
 
-<p><a href="https://en.wikipedia.org/wiki/List_of_homebrew_video_games"><strong>Homebrew</strong></a> means software that is not made or authorized by Nintendo. This lets you play games made by homebrew developers, edit your saves, and much, much more.</p>
+                <p class="notice--warning">Read all of the introductory pages before proceeding.</p>
 
-<p>DSi homebrew is <b>free</b> as long as you have a copy of Flipnote Studio.</p>
+                <h2 id="what-is-homebrew">What is homebrew?</h2>
 
-<h2 id="what-is-custom-firmware">What is Custom Firmware?</h2>
+                <p><a href="https://en.wikipedia.org/wiki/List_of_homebrew_video_games"><strong>Homebrew</strong></a> means software that is not made or authorized by Nintendo. This lets you play games made by homebrew developers, edit your saves, and much, much more.</p>
 
-<p><strong>Custom Firmware</strong> (“CFW”) enables you to use more advanced hacks that any normal DSiWare homebrew can't acheive, like custom DSiWare apps, and emulating the GBA with a higher speed than a traditional DS system, for example.</p>
+                <p>DSi homebrew is <b>free</b> as long as you have a copy of Flipnote Studio.</p>
 
-<p>Once released, CFW can be easily set up on any console.</p>
+                <h2 id="what-is-custom-firmware">What is Custom Firmware?</h2>
 
-<h2 id="what-does-this-guide-install">What does this guide install?</h2>
+                <p><strong>Custom Firmware</strong> (“CFW”) enables you to use more advanced hacks that any normal DSiWare homebrew can't acheive, like custom DSiWare apps, and emulating the GBA with a higher speed than a traditional DS system, for example.</p>
 
-<p>This guide, when RocketLauncher is released, will install RocketLauncher (a modified flashcart whitelist) and a version of DSi Custom Firmware known as "HiyaCFW." For now, we are installing firmware 1.4 as well as installing a homebrew entrypoint.</p>
+                <p>Once released, CFW can be easily set up on any console.</p>
 
+                <h2 id="what-does-this-guide-install">What does this guide install?</h2>
 
-<h2 id="what-can-i-do-with-custom-firmware">What can I do with Custom Firmware, once released?</h2>
+                <p>This guide, when RocketLauncher is released, will install RocketLauncher (a modified flashcart whitelist) and a version of DSi Custom Firmware known as "HiyaCFW." For now, we are installing firmware 1.4 as well as installing a homebrew entrypoint.</p>
 
-<ul>
-  <li>Install DSiWare much easier than previously possible</li>
-  <li>Protect against bricks by making the DSi use your SD card as its internal memory</li>
-  <li>Play games for older systems by using emulators faster than a normal DS system can</li>
-  <li>Install homebrew titles to your system, and have them appear on your Nintendo DSi Menu</li>
-  <li>Run many old Nintendo DS flash carts that were blocked long ago or never worked on the DSi/DSi XL</li>
-</ul>
+                <h2 id="what-can-i-do-with-custom-firmware">What can I do with Custom Firmware, once released?</h2>
 
-<h2 id="what-do-i-need-to-know-before-starting">What do I need to know before starting?</h2>
+                <ul>
+                    <li>Install DSiWare much easier than previously possible</li>
+                    <li>Protect against bricks by making the DSi use your SD card as its internal memory</li>
+                    <li>Play games for older systems by using emulators faster than a normal DS system can</li>
+                    <li>Install homebrew titles to your system, and have them appear on your Nintendo DSi Menu</li>
+                    <li>Run many old Nintendo DS flash carts that were blocked long ago or never worked on the DSi/DSi XL</li>
+                </ul>
 
-<ul>
-  <li>Every time you modify your system, there is a chance that your console <strong>will brick!</strong> Precautions are taken so that this is unlikely to happen, but the risk is present.</li>
-  <li>This guide currently only works on US-region DSi and DSi XL systems. It will work on EU-region systems once ugopwn, the Flipnote Studio exploit, is released for the EU version of Flipnote Studio.</li>
-  <li><strong>Keep your DSi plugged in AT ALL TIMES DURING THIS PROCESS to avoid sudden power loss!</strong></li>
-</ul>
+                <h2 id="what-do-i-need-to-know-before-starting">What do I need to know before starting?</h2>
 
-    </section>
-  </article>
+                <ul>
+                    <li>Every time you modify your system, there is a chance that your console <strong>will brick!</strong> Precautions are taken so that this is unlikely to happen, but the risk is present.</li>
+                    <li>This guide currently only works on US-region DSi and DSi XL systems. It will work on EU-region systems once ugopwn, the Flipnote Studio exploit, is released for the EU version of Flipnote Studio.</li>
+                    <li><strong>Keep your DSi plugged in AT ALL TIMES DURING THIS PROCESS to avoid sudden power loss!</strong></li>
+                </ul>
 
-  <hr>
-  
-  <center>
-  <!--ins class="adsbygoogle"
+            </section>
+        </article>
+
+        <hr>
+
+        <center>
+            <!--ins class="adsbygoogle"
       style="display:block"
       data-ad-client="ca-pub-6670011780914577"
       data-ad-slot="7670623049"
@@ -267,35 +204,21 @@
   (adsbygoogle = window.adsbygoogle || []).push({});
   </--script-->
 
-  </center>
+        </center>
 
-</div>
-
-
-    <div class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-<!-- end custom footer snippets -->
-
-        
-
-
-
-<div class="page__footer-copyright">&copy; 2017 jerbear64 - Original guide by <a href="https://github.com/DSiGuide">DSiGuide.me Developers</a> - Site design by <a href="https://github.com/Plailect">Plailect</a> - <a href="https://github.com/jerbear64/twlguide">Source</a>
-      </footer>
     </div>
 
-    <script src="https://3ds.guide/assets/js/main.min.js"></script>
+    <div class="page__footer">
+        <footer>
+            <!-- start custom footer snippets -->
+            <!-- end custom footer snippets -->
 
+            <div class="page__footer-copyright">&copy; 2017 jerbear64 - Original guide by <a href="https://github.com/DSiGuide">DSiGuide.me Developers</a> - Site design by <a href="https://github.com/Plailect">Plailect</a> - <a href="https://github.com/jerbear64/twlguide">Source</a>
+        </footer>
+        </div>
 
+        <script src="https://3ds.guide/assets/js/main.min.js"></script>
 
+</body>
 
- 
-
-
-
-
-
-
-  </body>
 </html>

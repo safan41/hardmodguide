@@ -11,20 +11,20 @@
     <meta name="description" content="A reasonably complete guide to DSi hacking, from stock to homebrew.">
 
     <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="TWLguide">
-    <meta property="og:title" content="TWLguide">
+    <meta property="og:site_name" content="hardmodguide">
+    <meta property="og:title" content="hardmodmguide">
 
     <link rel="canonical" href="https://jerbear64.github.io/twlguide/index.html">
     <meta property="og:url" content="https://jerbear64.github.io/twlguide/index.html">
 
-    <meta property="og:description" content="A reasonably complete guide to DSi hacking, from stock to homebrew.">
+    <meta property="og:description" content="A reasonably complete guide to DSi hardmodding, from stock to hardmod.">
 
     <script type="application/ld+json">
         {
           "@context" : "http://schema.org",
           "@type" : "Person",
-          "name" : "jerbear64",
-          "url" : "https://jerbear64.github.io/twlguide",
+          "name" : "Safan41",
+          "url" : "https://safan41.github.io/hardmodguide",
           "sameAs" : null
         }
     </script>
@@ -93,11 +93,11 @@
         <div class="wrapper">
             <h1 class="page__title" itemprop="headline">
 
-                TWLguide
+                hardmodguide
 
             </h1>
 
-            <p class="page__lead">A reasonably complete guide to DSi hacking, <br /> from stock to homebrew.<br />
+            <p class="page__lead">A reasonably complete guide to DSi hardmoding, <br /> from stock to hardmod.<br />
             </p>
 
             <p><a href="get-started.html" class="btn btn--light-outline btn--large">Get Started</a></p>
@@ -119,18 +119,16 @@
         <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
 
             <meta itemprop="headline" content="jerbear64.github.io/twlguide">
-            <meta itemprop="description" content="A reasonably guide to DSi hacking,  from stock to homebrew.">
+            <meta itemprop="description" content="A reasonably guide to DSi hardmoding,  from stock to hardmod.">
 
             <section class="page__content" itemprop="text">
                 <hr>
 
-                <p class="notice--warning">Please note: This guide is incomplete, due to some exploits (such as RocketLauncher) being unreleased. For now, we will walk you through installing firmware version 1.4 on your DSi, which is the firmware version required for RocketLauncher to function once it's released.</p>
+                <p class="notice--warning">Please note: This guide is not for beginners, it involves disassembling your device and soldering!</p>
 
                 <div class="notice"><b>If you need help, ask the <a href="https://discord.gg/8X5ddgH">NDS(i)Brew Scene Discord server</a>!</b></div>
 
-                <div class="notice"><b>If you would like to donate, you can do so through <a href="https://www.paypal.me/jerbear64">PayPal</a>.</b></div>
-
-                <p class="notice--info">This guide currently works with the DSi and DSi XL with the United States region.</p>
+                <p class="notice--info">This guide works with the DSi and DSi XL on any region.</p>
 
                 <!--hr>
 
@@ -154,12 +152,14 @@
                 </div>
 
                 <p class="notice--warning">Read all of the introductory pages before proceeding.</p>
+                
+                <div class="notice"><p> This guide will show both how to hardmod, and downgrade to 1.4 to install exploitable dsiware.</p></div>
 
                 <h2 id="what-is-homebrew">What is homebrew?</h2>
 
                 <p><a href="https://en.wikipedia.org/wiki/List_of_homebrew_video_games"><strong>Homebrew</strong></a> means software that is not made or authorized by Nintendo. This lets you play games made by homebrew developers, edit your saves, and much, much more.</p>
 
-                <p>DSi homebrew is <b>free</b> as long as you have a copy of Flipnote Studio.</p>
+                <p>DSi homebrew is <b>free</b> as long as you have a copy of Flipnote Studio. Assumming that you looked at <a href="https://dsiguide.me/">dsiguide.me</a> , you're going to have to get basic soldering tools</p>
 
                 <h2 id="what-is-custom-firmware">What is Custom Firmware?</h2>
 
@@ -169,23 +169,19 @@
 
                 <h2 id="what-does-this-guide-install">What does this guide install?</h2>
 
-                <p>This guide, when RocketLauncher is released, will install RocketLauncher (a modified flashcart whitelist) and a version of DSi Custom Firmware known as "HiyaCFW." For now, we are installing firmware 1.4 as well as installing a homebrew entrypoint.</p>
+                <p>This guide, we are installing a hardmod, firmware 1.4 and a homebrew entrypoint.</p>
 
-                <h2 id="what-can-i-do-with-custom-firmware">What can I do with Custom Firmware, once released?</h2>
+                <h2 id="what-can-i-do-with-custom-firmware">What can I do with a hardmod?</h2>
 
                 <ul>
-                    <li>Install DSiWare much easier than previously possible</li>
-                    <li>Protect against bricks by making the DSi use your SD card as its internal memory</li>
-                    <li>Play games for older systems by using emulators faster than a normal DS system can</li>
-                    <li>Install homebrew titles to your system, and have them appear on your Nintendo DSi Menu</li>
-                    <li>Run many old Nintendo DS flash carts that were blocked long ago or never worked on the DSi/DSi XL</li>
+                    <li>The only great thing about a hardmod is that it prevents your DSi form having a permanent brick</li>
                 </ul>
 
                 <h2 id="what-do-i-need-to-know-before-starting">What do I need to know before starting?</h2>
 
                 <ul>
-                    <li>Every time you modify your system, there is a chance that your console <strong>will brick!</strong> Precautions are taken so that this is unlikely to happen, but the risk is present.</li>
-                    <li>This guide currently only works on US-region DSi and DSi XL systems. It will work on EU-region systems once ugopwn, the Flipnote Studio exploit, is released for the EU version of Flipnote Studio.</li>
+                    <li>Every time you modify your system, there is a chance that your console <strong>will brick!</strong> Precautions are taken so that this is likely to happen if you are not careful.</li>
+                    <li>Make sure you safely and carefully disassemble and reassemble your DSi carefully or you will <strong>brick!</strong></li>
                     <li><strong>Keep your DSi plugged in AT ALL TIMES DURING THIS PROCESS to avoid sudden power loss!</strong></li>
                 </ul>
 
@@ -213,7 +209,7 @@
             <!-- start custom footer snippets -->
             <!-- end custom footer snippets -->
 
-            <div class="page__footer-copyright">&copy; 2017 jerbear64 - Original guide by <a href="https://github.com/DSiGuide">DSiGuide.me Developers</a> - Site design by <a href="https://github.com/Plailect">Plailect</a> - <a href="https://github.com/jerbear64/twlguide">Source</a>
+            <div class="page__footer-copyright">&copy; 2018 safan41 - Original guide by <a href="https://gbatemp.net/threads/dsi-downgrading-the-complete-guide.393682/">Gadorach</a> - Site design by <a href="https://github.com/Plailect">Plailect</a> - <a href="https://github.com/safan41/hardmodguide">Source</a>
         </footer>
         </div>
 

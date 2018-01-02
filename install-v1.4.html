@@ -103,7 +103,7 @@
             <div class="page__inner-wrap">
 
                 <header>
-                    <h1 class="page__title" itemprop="headline">Installing v1.4 (ugopwn)
+                    <h1 class="page__title" itemprop="headline">Installing v1.4 (hardmod)
                     </h1>
 
                 </header>
@@ -132,7 +132,7 @@
                     <hr>
 
                     <p class="notice--info">We will now install firmware version 1.4, in preparation for RocketLauncher.</p>
-                    <p class="notice--warning">Flipnote Studio must be installed on your DSi system for this to work. Due to ugopwn only being released for USA currently, a United States system is additionally required.
+                    <p class="notice--warning">You <strong>must</strong> have decent soldering skills for this to work.
 
                     </p>
                     <div class="notice--danger">There is a risk of bricking. Please ensure that all steps are followed correctly, and keep the NAND backup we will create in a safe place.</div>
@@ -140,53 +140,57 @@
                     <h3 id="what-you-need">What you need</h3>
 
                     <ul>
+                        <li>Confidence</li>
+                        <li>An SD card reader able to read eMMC chips running in single data-line mode.</li>
+                        <li>A pencil-tipped soldering iron, and very fine wire, 28AWG or smaller, preferable 30AWG+.</li>
+                        <li>A microSD card adapter</li>
                         <li>The latest release of <a href="files/ugopwn.zip">ugopwn</a> </li>
-                        <li>The latest release of <a href="https://github.com/Jimmy-Z/twlnf/releases">twlnf</a></li>
-                        <li>The latest release of <a href="files/dsi_srl_extract.zip">DSi SRL Extractor (with console_id.py)</a> </li>
+                        <li>The latest release of <a href="https://github.com/Jimmy-Z/twlbf/releases/latest">twlbf</a></li>
                         <li>A twlnf firmware v1.4 installation script for your region (<a href="files/install-1.4-USA.nfs">USA</a> or <a href="files/install-1.4-EUR.nfs">EUR</a>)</li>
                         <li>The latest release of <a href="https://www.python.org/downloads/">Python 3</a></li>
-
+                        <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:9df419c1983140b3ce1c520697272e9e7a38bd58&dn=DSiFirmwareFiles
+                        "><code class="highlighter-rouge">DSi firmware files.zip</code></a></li>
+                        <li>The latest release of <a href="https://mega.nz/#!sm4BWKoQ!KgHd58CzKknqmGQO2nicnn-JYcYixB9YZdqQz4Lm-Z8">TWLTool</a> </li>
+                        <li>The latest release of <a href="http://problemkaputt.de/gba.htm">No$GBA</a> </li>
+                        <li>The <a href="https://github.com/dsiguide/dsiguide.github.io/raw/master/files/dsi%20footer%20template.bin">DSi footer template</a></li>
+                        <li>The latest release of <a href="https://mh-nexus.de/en/downloads.php?product=HxD">HxD</a> </li>
                         <li>The latest release of <a href="files/NUSDownloader.zip">NUS Downloader (with sort.py)</a> </li>
-
+                        <li><a href="https://sourceforge.net/projects/win32diskimager/files/Archive/Win32DiskImager-0.9.5-install.exe/download">Win32DiskImager</a></li>
                     </ul>
 
                     <!-- And this is where it ends and goes to the next step-->
 
                     <h3 id="instructions">Instructions</h3>
-                    <h4 id="section-i---gathering-files">Section I - Gathering the Necessary Files</h4>
+                    <h4 id="section-i---gathering-files">Section I - The hardmod</h4>
 
                     <ol>
-                        <li>Power on your device.</li>
-                        <li>Go to System Settings &gt; Data Management &gt; System Memory &gt; Flipnote Studio (or any other DSiWare) &gt; Copy &gt; Yes, and then exit to the DSi Menu. <em>(If Data Management isn't appearing, open the DSi Shop, close it, and try again.)</em></li>
-                        <li>Power off your device, and insert the device's SD card into your computer. </li>
-                        <li>Copy <i>the contents of</i> <code class="highlighter-rouge">twlnf.zip</code> to the root of your SD card, and rename twlnf.nds to <code class="highlighter-rouge">boot.nds</code>.</li>
-                        <li>Copy <em>the contents of</em> <code class="highlighter-rouge">ugopwn.zip</code> to the root of your SD card. </li>
-                        <li>Copy the twlnf 1.4 installation script for your region to the root of your SD card.</li>
-                        <li>Unzip <code class="highlighter-rouge&quot;">dsi_srl_extract.zip</code> to your computer. Open your SD Card's drive, and navigate to Private &gt; DS &gt; Title. Copy your .bin file to your <code class="highlighter-rouge&quot;">dsi_srl_extract</code> directory. If multiple .bin files are present, only one needs to be copied.</li>
-                        <li>Double-click on <code class="highlighter-rouge">console_id.py</code> to run it. You will now see a console_id.txt file in the directory. <em>(Note: On Unix-based systems (Mac and Linux, for example), <a href="https://www.winehq.org/">WINE</a> is required for this script to run.)</em></li>
-                        <li>Copy <code class="highlighter-rouge">console_id.txt</code> to the root of your SD card.
-                        </li>
-                        <li>Remove the SD card from your computer, and insert it into the SD card slot on your DSi.</li>
-
-                        <li>Power on your DSi, and open Flipnote Studio.</li>
-                        <li>Press "View Flipnote", then "SD Card". </li>
-                        <li>Choose "select folder", then choose "user" instead of "normal".</li>
-                        <li>Open the ugopwn folder.</li>
-                        <li>Click on the note with the red bottom half, then choose "edit".</li>
-                        <li>Once you are on the editing page, click on the flipnote frog icon in the bottom left.</li>
-                        <li>Click on the film roll icon, then choose "copy".</li>
-                        <li>Choose "back", then "exit". </li>
-                        <li>Click on the second note, then choose "edit". </li>
-                        <li>Click on the flipnote frog icon in the bottom left.</li>
-                        <li>Click on the film roll icon.</li>
-                        <li>Click on the single right arrow (the next to last arrow icon) two times. You will see a new frame be created. </li>
-                        <li>Click on the paste button exactly 122 times. </li>
-                        <li>Click the erase button, then the paste button. If twlnf doesn't appear, ensure your SD card is formatted as FAT32, and that booting to Calender mode is disabled in Flipnote Studio's settings.</li>
-                        <li>You are now in twlnf. When prompted, press (A) to create a NAND backup. This will take a few minutes.</li>
-                        <li>When the NAND backup is finished, press (B) to exit twlnf. This will power off your device.</li>
+                        <li>Power offyour device.</li>
+                        <li>Disassemble your device</li>
+                        <ul><li>If you have a DSi go <a href="https://www.ifixit.com/Teardown/Nintendo+DSi+Teardown/714">here</a></li>
+                            <li>If you have a Dsi XL go <a href="https://www.youtube.com/watch?v=srg13lycHx8">here</a></li>
+                        </ul>
+                        <li>Put the NAND board (the biggest board) in front of you and examine these images (corresponding to your device)</li>
+                        <p class="notice--info">Dsi Side A Pinouts <img src="images/pinouts/DSi/a.jpg" alt="You need to see this"/></p>
+                        <p class="notice--info">Dsi Side B Pinouts <img src="images/pinouts/DSi/b.png" alt="You need to see this"/></p>                        
+                        <p class="notice--info">Dsi XL Side B Pinouts <img src="images/pinouts/DSi XL/nand.png" alt="You need to see this"/></p>                        
+                        <li>Make sure you now where the CLK, GND, CMD, and DAT0 pinouts are and solder them to an microSD card reader</li>
+                        <p class="notice--info">microSD Exmaple<img src="images/sd.jpg" alt="You need to see this"/> </p>
+                        <li>Turn on the Dsi. The error code that pops up should be <code class="highlighter-rouge">0000FE00</code></li>
+                        <ul><li>If it isn't go to <a href="troubleshooting.html">troubleshooting</a></li></ul>
+                        <li>Stick the microSD card reader into a your SD card reader and insert it to your computer. On windows if it asks you to format it, click no or you will <strong>brick!</strong></li>
+                        <li>Install Win32DiskImager form the downloads and open it</li>
+                        <li>Click the folder icon and browse to your desktop. In the text box, write NAND_0.bin. When selecting type, choose All types *.* </li>
+                        <li>Choose the device that is the DSi and click read. Once it is done, click the folder icon,change the name to NAND_1 and read again</li>
+                        <li>Open HxD and drag both files into the editor. Go to the top bar, click "Analysis",click "File compare" from the drop down menu, then click "Compare". </li>
+                        <li>Choose to compare both files then click OK when done</li>
+                        <ul><li>If it says "The chosen files are identical.", you are good to go to the next section</li>
+                        <li>If it doesn't say that, and both NANDs aren't around 240MB, dump NAND_1/NAND_0 again</li>
+                        </ul>
                     </ol>
-                    <h4 id="section-ii---nus">Section II - Downloading v1.4 Files</h4>
+                    <h4 id="section-ii---nus">Section II - Downloading v1.4 Files/Getting CID and Console ID</h4>
+                    <h4 id="part-i-sectionii">Part I - Getting CID and Console ID</h4>
                     <ol>
+                        <li>Open TWLbf</li>
                         <li>Insert your DSi's SD card into your PC.</li>
                         <li>Copy <code class="highlighter-rouge">nand.bin</code> to a safe place on your computer. <em>Do not lose this file!</em> It is an essential backup.</li>
                         <li>Open <code class="highlighter-rouge">NUS Downloader.exe</code> and check the box that says "Create Decryped Contents (*.app)" <em>(Note: Unix-based systems (Mac and Linux, for example) can run the .exe natively using Mono.)</em></li>

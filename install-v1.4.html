@@ -145,7 +145,7 @@
                         <li>A pencil-tipped soldering iron, and very fine wire, 28AWG or smaller, preferable 30AWG+.</li>
                         <li>A microSD card adapter</li>
                         <li>The latest release of <a href="files/ugopwn.zip">ugopwn</a> </li>
-                        <li>The latest release of <a href="https://github.com/Jimmy-Z/twlbf/releases/latest">twlbf</a></li>
+                        <li>The latest fork of <a href="https://github.com/Jimmy-Z/bfCL/releases/latest">twlbf</a></li>
                         <li>A twlnf firmware v1.4 installation script for your region (<a href="files/install-1.4-USA.nfs">USA</a> or <a href="files/install-1.4-EUR.nfs">EUR</a>)</li>
                         <li>The latest release of <a href="https://www.python.org/downloads/">Python 3</a></li>
                         <li><i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. Use a torrent client to download the file."></i> - <a href="magnet:?xt=urn:btih:9df419c1983140b3ce1c520697272e9e7a38bd58&dn=DSiFirmwareFiles
@@ -186,41 +186,66 @@
                         <ul><li>If it says "The chosen files are identical.", you are good to go to the next section</li>
                         <li>If it doesn't say that, and both NANDs aren't around 240MB, dump NAND_1/NAND_0 again</li>
                         </ul>
+                        <li>Copy <code class="highlighter-rouge">NAND_0.bin</code> to a safe place on your computer. <em>Do not lose this file!</em> It is an essential backup.</li>
                     </ol>
                     <h4 id="section-ii---nus">Section II - Downloading v1.4 Files/Getting CID and Console ID</h4>
-                    <h4 id="part-i-sectionii">Part I - Getting CID and Console ID</h4>
+                    <h4 id="part-i-section-ii">Part I - Getting CID and Console ID</h4>
                     <ol>
-                        <li>Open TWLbf</li>
-                        <li>Insert your DSi's SD card into your PC.</li>
-                        <li>Copy <code class="highlighter-rouge">nand.bin</code> to a safe place on your computer. <em>Do not lose this file!</em> It is an essential backup.</li>
-                        <li>Open <code class="highlighter-rouge">NUS Downloader.exe</code> and check the box that says "Create Decryped Contents (*.app)" <em>(Note: Unix-based systems (Mac and Linux, for example) can run the .exe natively using Mono.)</em></li>
-                        <li>Uncheck the box that says "Keep Enc. Contents".</li>
+                        <li>Open bfCL and <a href="https://gbatemp.net/threads/twlbf-a-tool-to-brute-force-dsi-console-id-or-emmc-cid.481732/">figure out how to use it</a></li>
+                        <li>Once your DSi's console ID is dumped, save them in a text file </li>
+                        <ul><li>This is something I don't currently how to use. If you can't figure it out, wait for this guide to be finished</li></ul>
+                        </ol>
+                        <h4 id=part-ii-section-ii>Part II - Mounting/Decrypting NAND</h4>
+                        <ol><li>Use this command template (replace the Console ID/CID here) and put it in a text file</li>
+                        <ul><li><code class="highlighter-rouge">twltool nandcrypt --cid [CID HERE] --consoleid [ConsoleID HERE] --in NAND_0.bin --out NAND_DEC.bin</code></li></ul>
+                        <li>Open the folder where Twltool (extracted) is and put your NAND_0.bin there </li>
+                        <li>Open a terminal in that folder.</li>
+                        <ul><li>Right click and click on "Open command window here"</li></ul>
+                        <li>Paste your command and wait for it to finish decrypting your NAND. The outcome should be <code class="highlighter-rouge">NAND_DEC.bin</code></li>
+                        <li>Install and open OSFMount</li>
+  <li>Click the "Mount new..." button, followed by the "Image File" tick mark</li>
+  <li>Press the button with the three periods (...) and select NAND_DEC.bin</li>
+  <li>Select "Partition 0" when prompted. This file should be around 200 MB</li>
+  <li>Uncheck the box that says "Read-Only Drive", and press OK</li>
+  <li>Go to the "My Computer" directory, and you should see a new drive. Double-click it</li>
+  
+
+                        <h4 id="part-ii-section-ii">Part III - Getting Firmware files </h4>
+                        <li>Open <code class="highlighter-rouge">NUS Downloader.exe</code> and check the box that says "Create Decryped Contents (*.app)"</li>
                         <li>Select: Database &gt; System (DSi) &gt; System Menu (Launcher) &gt; [Your Region] &gt; v512 </li>
-                        <li>Select "Start NUS Download!"</li>
-                        <li>When done, select: Database &gt; System (DSi) &gt; Nintendo DS Cart Whitelist &gt; All &gt; v256 </li>
-                        <li>Select "Start NUS Download!"</li>
-                        <li>When done, select: Database &gt; System (DSi) &gt; System Settings &gt; [Your Region] &gt; v512 </li>
-                        <li>Select "Start NUS Download!"</li>
-                        <li>When done, select: Database &gt; System (DSi) &gt; Version Data &gt; [Your Region] &gt; v4 (China) </li>
-                        <li>Select "Start NUS Download!"</li>
-                        <li>Exit NUS Downloader, and run <code class=="highlighter-rouge">sort.py</code> to prepare the titles for installation.</li>
-                        <li>You now have a new folder called <code class="highlighter-rouge">title</code> in your NUS Downloader directory. Copy this folder to the root of your SD card.</li>
-                        <li>Unplug your SD card, and insert it in your DSi.</li>
+  <li>Select "Start NUS Download!"</li>
+  <li>When done, select: Database &gt; System (DSi) &gt; Nintendo DS Cart Whitelist &gt; All &gt; v256 </li>
+  <li>Select "Start NUS Download!"</li>
+  <li>When done, select: Database &gt; System (DSi) &gt; System Settings &gt; [Your Region] &gt; v512 </li>
+  <li>Select "Start NUS Download!"</li>
+  <li>When done, select: Database &gt; System (DSi) &gt; Version Data &gt; [Your Region] &gt; v4 (China) </li>
+  <li>Select "Start NUS Download!"</li>
+  <li>Exit NUS Downloader, and run <code class="highlighter-rouge">sort.py</code> to prepare the titles for installation.</li>
+                        <li>You now have a new folder called <code class="highlighter-rouge">title</code> in your NUS Downloader directory.</li>
+  <li>Drag the titles folder from the NUS Downloader folder into the root of the NAND</li>
+  <li>Go to your OSFMount window, and press "Dismount". Exit OSFMount.</li>
+  <li> Do steps 1-4 but use NAND_DEC instead of NAND_O, and use this command instead</li>
+  <ul><li><code class="highlighter-rouge">twltool nandcrypt --cid [CID HERE] --consoleid [ConsoleID HERE] --in NAND_DEC.bin --out NAND_ENC.bin</code></li></ul>  
                     </ol>
-                    <h4 id="section-iii-installing">Section III - Installing System Version 1.4</h4>
-                    <ol>
-                        <li>We are now modifying the DSi NAND directly. Ensure your DSi is plugged in and has a full battery.</li>
-                        <li>Repeat steps 11 - 24 of Section I to run twlnf.</li>
-                        <li>Wait for twlnf to load. When prompted, press (X) to mount the NAND directly. <em>(twlnf does not list this as an option.)</em></li>
-                        <li>Navigate to <code class="highlighter-rouge">install-1.4-(your region).nfs</code>. Press (A) to execute.</li>
-                        <li>twlnf will now verify that all files are in place. When prompted, press (A) to continue.</li>
-                        <li>twlnf is now installing firmware version 1.4 on your DSi. When <code class="highlighter-rouge">execution returned 0</code> appears, the script has finished executing.</li>
-                        <li>Press (SELECT) to quit twlnf, then (A) to confirm. Your DSi will power off.</li>
-                        <li>Power on your DSi, navigate to System Settings, and verify that your system version is now 1.4.</li>
-                    </ol>
-
+              <h4 id="section-iii---testing">Section III - Testing Your Downgraded NAND with NO$GBA and flashing to DSi</h4>
+          <li>Download and extract NO$GBA to a directory.</li>
+              <li>Copy the NAND_ENC.bin file to your NO$GBA directory (make sure you have extracted the NO$GBA archive) and rename it to DSI-1.mmc</li>
+              <li>Extract the DSi BIOS files from the "DSi firmware files.zip" archive into the NO$GBA directory</li>
+              <li>Download the DSi footer template file and extract it to the NO$GBA directory. </li>
+              <li>Open it in HxD. </li>
+              <li>Replace the 16 bytes filed with AAs with your CID </li>
+              <li>Replace the 8 bytes filed with BBs with your Console ID, but reversed. This means that if your Console ID starts with the byte 26 and ends with 08, for example, it should now end with 26 and start with 08. </li>
+              <li>After you have inserted your CID and Console ID, highlight and copy the entire footer file.  </li>
+              <li>Open DSi-1.mmc and scroll to the end of the file. At the end of the file, paste in the footer. </li>
+              <li>Save and close DSi-1.mmc and open No$GBA.</li>
+              <li>Go to options and then Emulation setup.</li>
+              <li>In the Emulation tab, set “Reset/Startup Entrypoint” to “GBA/NDS BIOS (Nintendo logo)” and NDS Mode Colors to “DSi (retail/16MB)”. Then click Save Now and then OK.</li>
+              <li>Go to File, Cartridge Menu (FileName), and then open any .nds file (such as <a href="https://github.com/Nuck-TH/fwTool/releases">fwtool</a></li>
+              <li>Your NAND will now be emulated by NO$GBA. Check that your NAND works perfectly</li>
+              <li>If your encrypted NAND works on NO$GBA, then rename the "NAND_ENC.bin" file to nand_dsi.bin (if it asks you to overwrite, you may want to move the other nand_dsi.bin somewhere else and try renaming it again)</li>
+              <li>Move the new nand_dsi.bin to the folder to your desktop. Then open Win32DiskImager, folder icon, choose <code class="highlighter-rouge">nand_dsi.bin</code> and flash it with the "Write" button </li>
+              
                     <p class="notice--primary">This guide is not yet finished. The next section will walk you through permanently installing an entrypoint so that ugopwn is no longer needed. Please bookmark this page and check periodically for updates!</a>
-
                     </p>
                 </section>
 
@@ -239,10 +264,9 @@
             <!-- start custom footer snippets -->
             <!-- end custom footer snippets -->
 
-            <div class="page__footer-copyright">&copy; 2017 jerbear64 - Original guide by <a href="https://github.com/DSiGuide">DSiGuide.me Developers</a> - Site design by <a href="https://github.com/Plailect">Plailect</a> - <a href="https://github.com/jerbear64/twlguide">Source</a>
         </footer>
         </div>
-
+        <div class="page__footer-copyright">&copy; 2018 safan41 - Original guide by <a href="https://gbatemp.net/threads/dsi-downgrading-the-complete-guide.393682/">Gadorach</a> - Site design by <a href="https://github.com/Plailect">Plailect</a> - <a href="https://github.com/safan41/hardmodguide">Source</a>
         <script src="https://3ds.guide/assets/js/main.min.js"></script>
 
 </body>

@@ -228,7 +228,8 @@
   <ul><li><code class="highlighter-rouge">twltool nandcrypt --cid [CID HERE] --consoleid [ConsoleID HERE] --in NAND_DEC.bin --out NAND_ENC.bin</code></li></ul>  
                     </ol>
               <h4 id="section-iii---testing">Section III - Testing Your Downgraded NAND with NO$GBA and flashing to DSi</h4>
-          <li>Download and extract NO$GBA to a directory.</li>
+          <ol>
+              <li>Download and extract NO$GBA to a directory.</li>
               <li>Copy the NAND_ENC.bin file to your NO$GBA directory (make sure you have extracted the NO$GBA archive) and rename it to DSI-1.mmc</li>
               <li>Extract the DSi BIOS files from the "DSi firmware files.zip" archive into the NO$GBA directory</li>
               <li>Download the DSi footer template file and extract it to the NO$GBA directory. </li>
@@ -244,8 +245,8 @@
               <li>Your NAND will now be emulated by NO$GBA. Check that your NAND works perfectly</li>
               <li>If your encrypted NAND works on NO$GBA, then rename the "NAND_ENC.bin" file to nand_dsi.bin (if it asks you to overwrite, you may want to move the other nand_dsi.bin somewhere else and try renaming it again)</li>
               <li>Move the new nand_dsi.bin to the folder to your desktop. Then open Win32DiskImager, folder icon, choose <code class="highlighter-rouge">nand_dsi.bin</code> and flash it with the "Write" button </li>
-              
-                    <p class="notice--primary"><a href="entrypoint.html>Continue to installing a premanant entrypoint </a>
+              </ol>
+                    <p class="notice--primary"><a href="entrypoint.html">Continue to installing a premanant entrypoint</a>
                     </p>
                 </section>
 
